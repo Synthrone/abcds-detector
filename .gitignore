@@ -11,6 +11,14 @@ helpers/_pycache_
 llms_evaluation/_pycache_
 prompts/_pycache_
 
+# Python package metadata
+*.egg-info/
+*.egg
+dist/
+build/
+*.pyc
+*.pyo
+
 # IDEs and editors
 .idea/
 .project
@@ -41,3 +49,4 @@ Thumbs.db
 
 # Git
 .git
+

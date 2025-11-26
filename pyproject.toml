@@ -1,12 +1,20 @@
 [project]
-name = "<YOUR_PROJECT_NAME>"
-description = "<YOUR_PROJECT_DESCRIPTION>"
-version = "0.0.0"
+name = "abcds-detector"
+description = "ABCD Detector for video ad analysis using Google AI"
+version = "1.0.0"
 requires-python = ">=3.11"
 readme = "README.md"
-license = { file = "LICENSE" }
-authors = [{ name = "<YOUR_NAME>", email = "<YOUR_EMAIL>" }]
-dependencies = []
+license = "Apache-2.0"
+authors = [{ name = "Google LLC", email = "abcds-detector@google.com" }]
+dependencies = [
+  "google-cloud-aiplatform==1.97.0",
+  "google-cloud-videointelligence==2.16.1",
+  "google-cloud-storage==2.19.0",
+  "moviepy==1.0.3",
+  "google-api-python-client==2.172.0",
+  "pandas==2.3.0",
+  "pyarrow==20.0.0",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -132,3 +140,7 @@ ignore = [
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

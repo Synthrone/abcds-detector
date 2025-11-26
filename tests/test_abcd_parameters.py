@@ -20,7 +20,7 @@
 
 """Module to test ABCD parameters"""
 
-from utils import build_abcd_params_config
+from abcds_detector.utils import build_abcd_params_config
 from dataclasses import dataclass
 
 
