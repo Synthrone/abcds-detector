@@ -21,13 +21,13 @@
 """Module that defines global parameters"""
 
 import os
+import uuid
 from abcds_detector.models import CreativeProviderType, LLMParameters
 
-FFMPEG_BUFFER = "reduced/buffer.mp4"
-FFMPEG_BUFFER_REDUCED = "reduced/buffer_reduced.mp4"
-
-if not os.path.exists("reduced"):
-  os.makedirs("reduced")
+unique_id = uuid.uuid4()
+tmp_dir = os.environ.get("TMPDIR", "/app/tmp")
+FFMPEG_BUFFER = f"{tmp_dir}/buffer_{unique_id}.mp4"
+FFMPEG_BUFFER_REDUCED = f"{tmp_dir}/buffer_reduced_{unique_id}.mp4"
 
 
 class Configuration:
