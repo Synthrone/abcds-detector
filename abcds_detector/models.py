@@ -1,7 +1,9 @@
 """Modules to define business logic modules"""
 
+import json
 from dataclasses import dataclass, field
 from enum import Enum
+from typing import Any
 
 
 class VideoFeatureCategory(Enum):
@@ -71,9 +73,15 @@ class FeatureEvaluation:
   detected: bool
   confidence_score: float
   rationale: str
-  evidence: str
+  evidence: Any  # Can be list, dict, or string depending on feature
   strengths: str
   weaknesses: str
+
+  def get_evidence_as_string(self) -> str:
+    """Returns evidence serialized as JSON string for storage."""
+    if isinstance(self.evidence, (list, dict)):
+      return json.dumps(self.evidence)
+    return str(self.evidence) if self.evidence else ""
 
 
 @dataclass
@@ -160,7 +168,11 @@ VIDEO_RESPONSE_SCHEMA = {
                 "type": "string",
             },
             "evidence": {
-                "type": "string",
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {},
+                },
             },
             "strengths": {
                 "type": "string",

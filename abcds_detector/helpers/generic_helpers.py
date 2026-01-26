@@ -481,7 +481,7 @@ def build_features_for_bq(
         "confidence_score": str(
             eval_feature.confidence_score
         ),  # TODO (ae) convert to str for now to avoid pandas issue
-        "evidence": eval_feature.evidence,
+        "evidence": eval_feature.get_evidence_as_string(),
         "rationale": eval_feature.rationale,
         "strengths": eval_feature.strengths,
         "weaknesses": eval_feature.weaknesses,
