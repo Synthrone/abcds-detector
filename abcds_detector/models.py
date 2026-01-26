@@ -171,7 +171,7 @@ VIDEO_RESPONSE_SCHEMA = {
                 "type": "array",
                 "items": {
                     "type": "object",
-                    "properties": {},
+                    "additionalProperties": True,
                 },
             },
             "strengths": {
