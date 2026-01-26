@@ -54,8 +54,7 @@ class PromptGenerator:
             or impossible to verify from the video, you must answer "false" and explain why it is ambiguous or unverifiable in your explanation.
             - Strict Adherence to Format: The output format is non-negotiable. Any deviation will result in failure.
             - CRITICAL: The "evidence", "rationale", "strengths", and "weaknesses" fields MUST be plain text strings, NOT JSON arrays or objects.
-              Even if a feature question shows a JSON structure example, convert it to a readable text description.
-              Include ALL relevant aspects from your analysis (visual, audio, presentation, content, timestamps, etc.) as flowing text.
+              Even if a feature question shows a JSON structure example, ignore that format and write natural descriptive sentences instead.
             - Assess your confidence in [SPECIFIC TASK/ASSERTION, e.g., 'the presence of the brand in a specific frame of the video'].
             For EACH feature, calculate a confidence score from 0.0 (completely uncertain) to 1.0 (absolutely certain).
                 Base this score on:
