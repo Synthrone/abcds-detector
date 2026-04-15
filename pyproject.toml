@@ -1,7 +1,7 @@
 [project]
 name = "abcds-detector"
 description = "ABCD Detector for video ad analysis using Google AI"
-version = "1.0.5"
+version = "1.1.0"
 requires-python = ">=3.11"
 readme = "README.md"
 license = "Apache-2.0"
@@ -10,10 +10,10 @@ dependencies = [
   "google-cloud-aiplatform==1.140.0",
   "google-cloud-videointelligence==2.16.1",
   "google-cloud-storage==2.19.0",
-  "moviepy==1.0.3",
+  "moviepy==2.2.1",
   "google-api-python-client==2.172.0",
   "pandas==3.0.2",
-  "pyarrow==20.0.0",
+  "pyarrow==23.0.1",
 ]
 
 [project.optional-dependencies]

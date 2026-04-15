@@ -1,7 +1,7 @@
 google-cloud-aiplatform==1.140.0
 google-cloud-videointelligence==2.16.1
 google-cloud-storage==2.19.0
-moviepy==1.0.3
+moviepy==2.2.1
 google-api-python-client==2.172.0
 pandas==3.0.2
-pyarrow==20.0.0
+pyarrow==23.0.1

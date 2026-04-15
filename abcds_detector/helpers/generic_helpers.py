@@ -28,7 +28,7 @@ from concurrent.futures import ThreadPoolExecutor
 import pandas
 import logging
 from google.cloud import bigquery
-from moviepy.editor import VideoFileClip
+from moviepy import VideoFileClip
 from abcds_detector.gcp_api_services import bigquery_api_service
 from abcds_detector.gcp_api_services import gcs_api_service
 from abcds_detector.configuration import FFMPEG_BUFFER, FFMPEG_BUFFER_REDUCED, Configuration
@@ -110,7 +110,7 @@ def trim_video(config: Configuration, video_uri: str):
 
     # trim
     clip = VideoFileClip(FFMPEG_BUFFER)
-    clip = clip.subclip(0, 5)
+    clip = clip.subclipped(0, 5)
     clip.write_videofile(FFMPEG_BUFFER_REDUCED)
 
     # upload
